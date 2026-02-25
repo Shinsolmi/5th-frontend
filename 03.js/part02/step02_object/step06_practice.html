@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q1.
+        var nums = [100, 200, 300, 400, 500];
+        // nums.pop();
+        // nums.pop();
+        // nums.splice(3, 2);
+        // console.log(nums.slice(0, 3));
+
+        // Q2.
+        var arr = [200, 100, 300];
+        // arr.splice(2, 0, 10000);
+        // console.log(arr);
+
+        // Q3. 
+        var year = '2026';
+        var month = '02';
+        var day = '12';
+        var hour = '23';
+        var minute = '59';
+        var second = '11';
+
+        // var result = year.concat('/', month, '/', day, ' ', hour, ':', minute, ':', second);
+        // result = `${year}/${month}/${day} ${hour}:${minute}:${second}`;
+        // console.log(result);
+
+        // Q4.
+        var planets = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성'];
+        // let n = prompt('행성 순서 번호 입력');
+        // console.log(planets[n - 1]);
+
+        // Q5.
+        var str = '거꾸로';
+        // let reverseStr = '';
+        // for (let index = str.length - 1; index >= 0; index--) {
+        //     const element = str.charAt(index);
+        //     reverseStr += element;
+        // }
+        // console.log(reverseStr);
+
+        // console.log(str.split('').reverse().join(''));
+
+        // Q6.
+        let planet = {
+            '수성': 'Mercury',
+            '금성': 'Venus',
+            '지구': 'Earth',
+            '화성': 'Mars',
+            '목성': 'Jupiter',
+            '토성': 'Saturn',
+            '천왕성': 'Uranus',
+            '해왕성': 'Neptune'
+        }
+        // console.log(planet['수성']);
+
+        // Q7.
+        let data = 'Javascript';
+        // for (let index = 0; index < data.length - 1; index++) {
+        //     console.log(data[index], data[index+1]);
+        // }
+
+        // Q8.
+        let inputAlphabet = 'A';
+
+        // if(inputAlphabet === inputAlphabet.toUpperCase()) {
+        //     console.log('YES');
+        // } else {
+        //     console.log('NO');
+        // }
+
+        // Q9.
+        let students = ['유느님', '조셉', '침착맨', '주펄', '풍전무', '기안84', '원지', '빠니보틀', '곽튜브'];
+
+        // students.sort().forEach((name, idx) => {
+        //     console.log(`번호: ${idx + 1}, 이름: ${name}`);
+        // });
+
+        // 내림차순 정렬
+        // students.sort((a, b) => {
+        //     if(a < b) return 1;
+        //     if(a > b) return -1;
+        //     return 0;
+        // });
+
+        // students.sort().reverse();
+
+        // students.sort((a, b) => b.localeCompare(a, 'ko'));
+
+        // console.log(students);
+
+        // const users = [
+        //     { name: '유느님', score: 95 },
+        //     { name: '기안84', score: 88 },
+        //     { name: '침착맨', score: 92 }
+        // ];
+
+        // users.sort((a, b) => b.name.localeCompare(a.name));
+
+        // Q10.
+        let inputStr = '오늘 저녁메뉴 추천';
+
+        let inputArray = inputStr.split(' ');
+        let strResult = '';
+
+        for (const word of inputArray) {
+            // console.log(word.slice(0, 1));
+            strResult += word.slice(0, 1);
+        }
+
+        console.log(strResult);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // {}
+        let obj1 = {name: 'cloud', age: 29};
+        // console.log(obj1);
+        // console.log(obj1.name);
+        // console.log(obj1['age']);
+
+        let obj2 = new Object();
+        // console.log(obj2);
+        // obj2.name = 'js';
+        // console.log(obj2);
+
+        // brand, color, price
+        function Car(brand, color, price){
+            this.brand = brand;
+            this.color = color;
+            this.price = price;
+
+            this.turnOn = function() {
+                console.log('시동 걸림');
+            }
+        }
+
+        let bmw = new Car("bmw", "red", 5000);
+        // console.log(bmw);
+        // bmw.turnOn();
+
+        // Student - name, age, grade, printInfo()
+        function Student(name, age, grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+
+            // this.printInfo = function() {
+            //     console.log(name, age, grade);
+            // }
+        }
+
+        let student = new Student('cloud', 40, 3);
+        // student.printInfo();
+        // for ~ in
+        // for (const key in student) {
+        //     console.log(student[key]);
+        // }
+
+        // 객체 메소드
+        const user = { name: 'ce', age: 29, role: 'dev' };
+        // console.log(Object.keys(user));
+        // console.log(Object.values(user));
+        // console.log(Object.entries(user));
+
+        const defaults = { theme: 'light', lang: 'ko' };
+        const userSettings = { theme: 'dark' };
+        const settings = Object.assign({}, defaults, userSettings);
+        // console.log(settings);
+
+        // Product - name, price
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            getInfo() {
+                return this.name + ' ' + this.price
+            }
+
+            get displayPrice() {
+                return this.price;
+            }
+
+            set discountPrice(rate) {
+                this.price = this.price * (1 - rate);
+            }
+
+        }
+
+        const keyboard = new Product('키보드', 50000);
+        console.log(keyboard.getInfo());
+
+    </script>
+</body>
+</html>

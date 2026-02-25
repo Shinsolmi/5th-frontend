@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // call by value : 기본타입
+        let height = 180;
+        let number = height;
+
+        // console.log(height);
+        // console.log(number);
+
+        height = 190;
+
+        // console.log(height);
+        // console.log(number);
+
+        // call by reference : 참조타입
+        let person = { name: 'it' }
+        // 얕은복사
+        let copyPerson = person;
+        // 깊은복사
+        // let deepCopyPerson = JSON.parse(JSON.stringify(person));
+        let deepCopyPerson = structuredClone(person);
+
+        // console.log(person);
+        // console.log(copyPerson);
+        console.log(deepCopyPerson);
+        
+        person.name = 'dev';
+        
+        // console.log(person);
+        // console.log(copyPerson);
+        console.log(deepCopyPerson);
+        
+    </script>
+</body>
+</html>

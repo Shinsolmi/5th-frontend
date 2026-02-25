@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .red {
+            color: #ff0000;
+        }
+        .blue {
+            color: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Cities</h1>
+        <ul>
+            <li id="seoul" class="red">서울</li>
+            <li id="tokyo" class="red">도쿄</li>
+            <li id="beijing" class="red">베이징</li>
+            <li id="newyork">뉴욕</li>
+        </ul>
+    </div>
+
+    <script>
+        // console.log(document.getElementById('seoul'));
+        // console.log(document.querySelector('li#beijing'));
+        // console.log(document.getElementsByTagName('li'));
+        // console.log(document.getElementsByClassName('red'));
+
+        // HTMLCollection : live 요소 - idx 꼬임 현상 => 일부만 변경
+        const elements = document.getElementsByClassName('red');
+        // console.log(elements);
+
+        // for (let i = 0; i < elements.length; i++) {
+        //     elements[i].className = 'blue';
+        // }
+
+        // v1
+        // [...elements].forEach((element) => element.className = 'blue');
+        // [...elements].forEach((element) => element.classList.replace('red' ,'blue'));
+
+        // v2 : NodeList : static 요소
+        const queryElements = document.querySelectorAll('.red');
+        // console.log(queryElements);
+        // queryElements.forEach((el) => el.className = 'blue');
+
+        const beijing = document.getElementById('beijing');
+        // console.log(beijing);
+        beijing.textContent = 'Beijing';
+        beijing.innerText = '<b>Beijing</b>';
+        beijing.innerHTML = '<b>Beijing</b>';
+        beijing.style.color = 'gold';
+        beijing.style.fontSize = '24px';
+        // console.log(beijing.style.color);
+
+        const newLi = document.createElement('li');
+        beijing.append(newLi);
+        // beijing.removeChild(newLi);
+        console.log(newLi);
+    </script>
+</body>
